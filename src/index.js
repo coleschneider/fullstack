@@ -37,3 +37,4 @@ const divideAll = (numArr) => {
 }
 
 console.log("divide: ", divideAll([50, 5, 2]))
+console.log(sumAll([3, 4, 12]))
