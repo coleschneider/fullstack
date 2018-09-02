@@ -6,8 +6,9 @@ const webpack = require("webpack");
 const webpackDevConfig = require("../../webpack.config");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const webpackHotMiddleware = require("webpack-hot-middleware");
+const history = require('connect-history-api-fallback');
 const app = express();
-
+app.use(history())
 if(process.env.NODE_ENV !== "production"){
   let compiler = webpack(webpackDevConfig);
   app.use(webpackDevMiddleware(compiler, {
@@ -20,6 +21,7 @@ app.use(webpackHotMiddleware(compiler))
 }
 
 // app.use(express.static(path.resolve(__dirname, 'dist')))
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/index.html'))
 })

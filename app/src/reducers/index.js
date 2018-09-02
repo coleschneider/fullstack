@@ -1,15 +1,22 @@
 import {combineReducers} from 'redux';
 import modals from './modals'
-
-const app = (state={loaded: false}, action) => {
-  switch(action.type){
-    case "APP_LOADED":
+import {
+  SCREEN_RESIZE, TOGGLE_NAVBAR
+} from '../constants/environment'
+const app = (state={isOpen: false}, action) => {
+  switch (action.type) {
+    case TOGGLE_NAVBAR:
     return {
       ...state,
-      loaded: true
+      isOpen: !state.isOpen
     }
-    default: return state
+    case SCREEN_RESIZE:
+        return {
+          screen: action.screen
+        }
+        default: return state
   }
+
 }
 export default combineReducers({
   app,
