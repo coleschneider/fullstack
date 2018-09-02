@@ -14,3 +14,15 @@ const sumAll = (numArr) => {
 }
 
 console.log(sumAll([3, 4, 12]))
+
+
+const subtractAll = (numArr) => {
+  //todo
+  return numArr.reduce((acc, num) => {
+    acc-=num
+    return acc
+  })
+
+}
+
+console.log(subtractAll([12, 3, 4]))
