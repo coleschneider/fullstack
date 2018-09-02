@@ -4,7 +4,7 @@ const DjanstraAlgo = (a, b) => {
   }
   return DjanstraAlgo(b, a % b)
 }
-console.log(DjanstraAlgo(10, 5))
+console.log("GCD: ", DjanstraAlgo(10, 5))
 
 const sumAll = (numArr) => {
   return numArr.reduce((acc, num) => {
@@ -13,7 +13,7 @@ const sumAll = (numArr) => {
 })
 }
 
-console.log(sumAll([3, 4, 12]))
+console.log("sum: ", sumAll([3, 4, 12]))
 
 
 const subtractAll = (numArr) => {
@@ -25,4 +25,15 @@ const subtractAll = (numArr) => {
 
 }
 
-console.log(subtractAll([12, 3, 4]))
+console.log("subtract: ", subtractAll([12, 3, 4]))
+
+const divideAll = (numArr) => {
+  //todo
+  return numArr.reduce((acc, num) => {
+    acc = acc / num
+    return acc
+  })
+
+}
+
+console.log("divide: ", divideAll([50, 5, 2]))
