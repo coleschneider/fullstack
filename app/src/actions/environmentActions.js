@@ -15,3 +15,9 @@ export const toggleNav = () => ({
   type: TOGGLE_NAVBAR,
   
 })
+
+
+export const initEnv = () => ({
+    type: SCREEN_RESIZE,
+    
+})

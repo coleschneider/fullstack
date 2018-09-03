@@ -9,7 +9,7 @@ import './styles.css'
 const store = configureStore()
 
 const render = () => {
-  ReactDOM.render(
+  return ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
         <App history={history} />

@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
 import modals from './modals'
+import auth from './auth'
 import {
   SCREEN_RESIZE, TOGGLE_NAVBAR
 } from '../constants/environment'
+import {reducer as formReducer} from 'redux-form'
 const app = (state={isOpen: false}, action) => {
   switch (action.type) {
     case TOGGLE_NAVBAR:
@@ -20,5 +22,7 @@ const app = (state={isOpen: false}, action) => {
 }
 export default combineReducers({
   app,
-  modals
+  modals,
+  auth,
+  form: formReducer
 })

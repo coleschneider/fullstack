@@ -7,6 +7,6 @@ const mapDispatchToProps = dispatch => {
     dispatch
   }
 }
-const NavBarContainer = connect((state) => ({...state}), mapDispatchToProps)(NavBar)
+const NavBarContainer = connect((state) => ({...state, auth: state.auth}), mapDispatchToProps)(NavBar)
 
 export default NavBarContainer

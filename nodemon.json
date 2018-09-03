@@ -1,0 +1,10 @@
+{
+  "igonore": [
+    "app/src/*.js",
+    "src/**/*.js"
+  ],
+  "watch": [
+    "app/server*"
+    
+  ]
+}
